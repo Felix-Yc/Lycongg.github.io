@@ -22,27 +22,28 @@
     var CONFIG = {"hostname":"lycongg.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="快乐的大学时光即将结束，趁现在赶紧行动！ 北六环有一点堵车，其他都还好租了一辆GOLF，省油又好开 第二天去打真人cs，芃哥团战真猛，吃鸡落地成盒哈哈 402YYDS！">
+  <meta name="description" content="之前想学一下latex,但是环境没配好，不了了之，今天心血来潮，必拿下！ 准备在 Sublime Text 和 mac 中使用 LaTeX 需要四个工具：  MacTeX Sublime Text LaTeXTools Skim  MacTeX 包含在Mac上使用LaTeX所需的与TeX相关的程序和包。Sublime Text是一个用于编写LaTeX文档的文本编辑器。Skim 是用于查看LaTeX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="402古北水镇之行">
-<meta property="og:url" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/index.html">
+<meta property="og:title" content="mac sublime+Latex+skim超详细配置过程">
+<meta property="og:url" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Scallop Silk">
-<meta property="og:description" content="快乐的大学时光即将结束，趁现在赶紧行动！ 北六环有一点堵车，其他都还好租了一辆GOLF，省油又好开 第二天去打真人cs，芃哥团战真猛，吃鸡落地成盒哈哈 402YYDS！">
+<meta property="og:description" content="之前想学一下latex,但是环境没配好，不了了之，今天心血来潮，必拿下！ 准备在 Sublime Text 和 mac 中使用 LaTeX 需要四个工具：  MacTeX Sublime Text LaTeXTools Skim  MacTeX 包含在Mac上使用LaTeX所需的与TeX相关的程序和包。Sublime Text是一个用于编写LaTeX文档的文本编辑器。Skim 是用于查看LaTeX">
 <meta property="og:locale">
-<meta property="og:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1268.PNG">
-<meta property="og:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1267.jpeg">
-<meta property="og:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/WechatIMG24574.jpeg">
-<meta property="og:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1343.JPG">
-<meta property="og:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1351.JPG">
-<meta property="og:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1354.JPG">
-<meta property="og:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1344.JPG">
-<meta property="article:published_time" content="2021-06-07T09:21:51.342Z">
-<meta property="article:modified_time" content="2021-06-08T11:11:59.656Z">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime7.png">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim.png">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime.png">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime2.png">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime3.png">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime5.png">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime6.png">
+<meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim2.png">
+<meta property="article:published_time" content="2021-06-12T05:52:49.000Z">
+<meta property="article:modified_time" content="2021-06-12T07:06:44.932Z">
 <meta property="article:author" content="怡誠">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1268.PNG">
+<meta name="twitter:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime7.png">
 
-<link rel="canonical" href="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/">
+<link rel="canonical" href="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">
 
 
 <script id="page-configurations">
@@ -55,7 +56,7 @@
   };
 </script>
 
-  <title>402古北水镇之行 | Scallop Silk</title>
+  <title>mac sublime+Latex+skim超详细配置过程 | Scallop Silk</title>
   
 
 
@@ -166,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/">
+    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/myprofile.jpg">
@@ -179,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          402古北水镇之行
+          mac sublime+Latex+skim超详细配置过程
         </h1>
 
         <div class="post-meta">
@@ -188,16 +189,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-06-07 17:21:51" itemprop="dateCreated datePublished" datetime="2021-06-07T17:21:51+08:00">2021-06-07</time>
+              <time title="Created: 2021-06-12 13:52:49 / Modified: 15:06:44" itemprop="dateCreated datePublished" datetime="2021-06-12T13:52:49+08:00">2021-06-12</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-08 19:11:59" itemprop="dateModified" datetime="2021-06-08T19:11:59+08:00">2021-06-08</time>
-              </span>
 
           
             <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -215,8 +210,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -231,10 +226,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>快乐的大学时光即将结束，趁现在赶紧行动！</p>
-<p><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1268.PNG"><br>北六环有一点堵车，其他都还好<br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1267.jpeg"><br>租了一辆GOLF，省油又好开<br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/WechatIMG24574.jpeg"><br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1343.JPG"><br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1351.JPG"><br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1354.JPG"></p>
-<p><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1344.JPG"><br>第二天去打真人cs，芃哥团战真猛，吃鸡落地成盒哈哈</p>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><p>402YYDS！</p>
+        <p>之前想学一下latex,但是环境没配好，不了了之，今天心血来潮，必拿下！</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>在 Sublime Text 和 mac 中使用 LaTeX 需要四个工具：</p>
+<ul>
+<li>MacTeX</li>
+<li>Sublime Text</li>
+<li>LaTeXTools</li>
+<li>Skim</li>
+</ul>
+<p>MacTeX 包含在Mac上使用LaTeX所需的与TeX相关的程序和包。Sublime Text是一个用于编写LaTeX文档的文本编辑器。Skim 是用于查看LaTeX文档的PDF查看器。LaTeXTools插件提供了多种功能，可简化使用LaTeX文件并用于构建LaTeX文档。<br>latextools文档: <a target="_blank" rel="noopener" href="https://latextools.readthedocs.io/en/latest/">latextools</a></p>
+<h2 id="step1"><a href="#step1" class="headerlink" title="step1"></a>step1</h2><p>安装MacTeX<br>链接：<a target="_blank" rel="noopener" href="http://www.tug.org/mactex/">maxtex</a></p>
+<h2 id="step2"><a href="#step2" class="headerlink" title="step2"></a>step2</h2><p>安装Sublime Text 3<br>链接：<a target="_blank" rel="noopener" href="https://www.sublimetext.com/3">sublime Text 3</a></p>
+<h2 id="step3"><a href="#step3" class="headerlink" title="step3"></a>step3</h2><p>安装Package Control<br>打卡sublime text3，输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">⌘command + shift + p</span><br></pre></td></tr></table></figure>
+<p>然后在窗口中搜索“Package Control”,安装它。<br>如果你常用 Sublime ，可能已经有安装Package Control，这一步可以跳过。</p>
+<h2 id="step4"><a href="#step4" class="headerlink" title="step4"></a>step4</h2><p>安装LaTeXTools</p>
+<ol>
+<li>在sublime中按 ⌘(Command) + Shift + P</li>
+<li>搜索“Package Control: Install Package”</li>
+<li>按 Enter</li>
+<li>搜索“LaTeXTools”</li>
+<li>按Enter<br>提示一下信息表明安装成功：<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime7.png" alt="sublime"></li>
+</ol>
+<h2 id="step5"><a href="#step5" class="headerlink" title="step5"></a>step5</h2><p>安装Skim:<a target="_blank" rel="noopener" href="https://skim-app.sourceforge.io/">skim</a></p>
+<h2 id="step6"><a href="#step6" class="headerlink" title="step6"></a>step6</h2><p>配置skim</p>
+<ol>
+<li>打开skim</li>
+<li>从菜单中选择“Skim”，然后选择“Preferences”</li>
+<li>选择“同步”</li>
+<li>选择“检查文件更改”</li>
+<li>选择“自动重新加载”</li>
+<li>从“预设”菜单中选择”sublime text”<br>配置如图：<img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim.png" alt="skim"></li>
+</ol>
+<h2 id="step7"><a href="#step7" class="headerlink" title="step7"></a>step7</h2><ol>
+<li>打开 Sublime Text 3，如下图所示选择Setting_User项。<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime.png" alt="sublime"><br>点击ok<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime2.png" alt="sublime"><br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime3.png" alt="sublime"></li>
+</ol>
+<h2 id="step8"><a href="#step8" class="headerlink" title="step8"></a>step8</h2><p>安装homebrew（已安装请跳过）<br><a target="_blank" rel="noopener" href="https://brew.sh/">honebrew</a>,网上安装homebrew教程很多，这里省略。</p>
+<h2 id="step9"><a href="#step9" class="headerlink" title="step9"></a>step9</h2><p>打开终端<br>输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install imagemagick</span><br></pre></td></tr></table></figure>
+<p>这一步是安装必要依赖<br>可以参考<a target="_blank" rel="noopener" href="https://latextools.readthedocs.io/en/latest/install/#installation">imagemagick文档</a></p>
+<h2 id="step10"><a href="#step10" class="headerlink" title="step10"></a>step10</h2><p>使用LaTeXTools: Check System命令来验证它们是否已安装并设置完成。<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime5.png" alt="sublime"><br>你将看到如下结果：<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime6.png" alt="sublime"></p>
+<h2 id="接下来就可以愉快的使用了！"><a href="#接下来就可以愉快的使用了！" class="headerlink" title="接下来就可以愉快的使用了！"></a>接下来就可以愉快的使用了！</h2><p>在sublime里新建tex文件，选择在tools菜单里选择build with latex, 或者选择build System后 command + b<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim2.png" alt="skim"></p>
 
     </div>
 
@@ -250,13 +282,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2018/01/25/pandas%E5%85%A5%E9%97%A8/" rel="prev" title="pandas">
-      <i class="fa fa-chevron-left"></i> pandas
+    <a href="/2021/06/10/Java%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%8F%8D%E5%B0%84%EF%BC%8C%E6%B3%A8%E8%A7%A3/" rel="prev" title="Java单元测试，反射，注解">
+      <i class="fa fa-chevron-left"></i> Java单元测试，反射，注解
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/06/10/Java%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%8F%8D%E5%B0%84%EF%BC%8C%E6%B3%A8%E8%A7%A3/" rel="next" title="Java单元测试，反射，注解">
-      Java单元测试，反射，注解 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -316,7 +345,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step1"><span class="nav-number">2.</span> <span class="nav-text">step1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step2"><span class="nav-number">3.</span> <span class="nav-text">step2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step3"><span class="nav-number">4.</span> <span class="nav-text">step3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step4"><span class="nav-number">5.</span> <span class="nav-text">step4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step5"><span class="nav-number">6.</span> <span class="nav-text">step5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step6"><span class="nav-number">7.</span> <span class="nav-text">step6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step7"><span class="nav-number">8.</span> <span class="nav-text">step7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step8"><span class="nav-number">9.</span> <span class="nav-text">step8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step9"><span class="nav-number">10.</span> <span class="nav-text">step9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step10"><span class="nav-number">11.</span> <span class="nav-text">step10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%84%89%E5%BF%AB%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BA%86%EF%BC%81"><span class="nav-number">12.</span> <span class="nav-text">接下来就可以愉快的使用了！</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -454,7 +483,7 @@
       quicklink({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/',]
       });
       });
   </script>

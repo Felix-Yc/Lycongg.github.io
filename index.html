@@ -155,6 +155,119 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/myprofile.jpg">
+      <meta itemprop="name" content="怡誠">
+      <meta itemprop="description" content="凡心所向，素履以往">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scallop Silk">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">mac sublime+Latex+skim超详细配置过程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-06-12 13:52:49 / Modified: 15:06:44" itemprop="dateCreated datePublished" datetime="2021-06-12T13:52:49+08:00">2021-06-12</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前想学一下latex,但是环境没配好，不了了之，今天心血来潮，必拿下！</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>在 Sublime Text 和 mac 中使用 LaTeX 需要四个工具：</p>
+<ul>
+<li>MacTeX</li>
+<li>Sublime Text</li>
+<li>LaTeXTools</li>
+<li>Skim</li>
+</ul>
+<p>MacTeX 包含在Mac上使用LaTeX所需的与TeX相关的程序和包。Sublime Text是一个用于编写LaTeX文档的文本编辑器。Skim 是用于查看LaTeX文档的PDF查看器。LaTeXTools插件提供了多种功能，可简化使用LaTeX文件并用于构建LaTeX文档。<br>latextools文档: <a target="_blank" rel="noopener" href="https://latextools.readthedocs.io/en/latest/">latextools</a></p>
+<h2 id="step1"><a href="#step1" class="headerlink" title="step1"></a>step1</h2><p>安装MacTeX<br>链接：<a target="_blank" rel="noopener" href="http://www.tug.org/mactex/">maxtex</a></p>
+<h2 id="step2"><a href="#step2" class="headerlink" title="step2"></a>step2</h2><p>安装Sublime Text 3<br>链接：<a target="_blank" rel="noopener" href="https://www.sublimetext.com/3">sublime Text 3</a></p>
+<h2 id="step3"><a href="#step3" class="headerlink" title="step3"></a>step3</h2><p>安装Package Control<br>打卡sublime text3，输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">⌘command + shift + p</span><br></pre></td></tr></table></figure>
+<p>然后在窗口中搜索“Package Control”,安装它。<br>如果你常用 Sublime ，可能已经有安装Package Control，这一步可以跳过。</p>
+<h2 id="step4"><a href="#step4" class="headerlink" title="step4"></a>step4</h2><p>安装LaTeXTools</p>
+<ol>
+<li>在sublime中按 ⌘(Command) + Shift + P</li>
+<li>搜索“Package Control: Install Package”</li>
+<li>按 Enter</li>
+<li>搜索“LaTeXTools”</li>
+<li>按Enter<br>提示一下信息表明安装成功：<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime7.png" alt="sublime"></li>
+</ol>
+<h2 id="step5"><a href="#step5" class="headerlink" title="step5"></a>step5</h2><p>安装Skim:<a target="_blank" rel="noopener" href="https://skim-app.sourceforge.io/">skim</a></p>
+<h2 id="step6"><a href="#step6" class="headerlink" title="step6"></a>step6</h2><p>配置skim</p>
+<ol>
+<li>打开skim</li>
+<li>从菜单中选择“Skim”，然后选择“Preferences”</li>
+<li>选择“同步”</li>
+<li>选择“检查文件更改”</li>
+<li>选择“自动重新加载”</li>
+<li>从“预设”菜单中选择”sublime text”<br>配置如图：<img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim.png" alt="skim"></li>
+</ol>
+<h2 id="step7"><a href="#step7" class="headerlink" title="step7"></a>step7</h2><ol>
+<li>打开 Sublime Text 3，如下图所示选择Setting_User项。<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime.png" alt="sublime"><br>点击ok<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime2.png" alt="sublime"><br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime3.png" alt="sublime"></li>
+</ol>
+<h2 id="step8"><a href="#step8" class="headerlink" title="step8"></a>step8</h2><p>安装homebrew（已安装请跳过）<br><a target="_blank" rel="noopener" href="https://brew.sh/">honebrew</a>,网上安装homebrew教程很多，这里省略。</p>
+<h2 id="step9"><a href="#step9" class="headerlink" title="step9"></a>step9</h2><p>打开终端<br>输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install imagemagick</span><br></pre></td></tr></table></figure>
+<p>这一步是安装必要依赖<br>可以参考<a target="_blank" rel="noopener" href="https://latextools.readthedocs.io/en/latest/install/#installation">imagemagick文档</a></p>
+<h2 id="step10"><a href="#step10" class="headerlink" title="step10"></a>step10</h2><p>使用LaTeXTools: Check System命令来验证它们是否已安装并设置完成。<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime5.png" alt="sublime"><br>你将看到如下结果：<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime6.png" alt="sublime"></p>
+<h2 id="接下来就可以愉快的使用了！"><a href="#接下来就可以愉快的使用了！" class="headerlink" title="接下来就可以愉快的使用了！"></a>接下来就可以愉快的使用了！</h2><p>在sublime里新建tex文件，选择在tools菜单里选择build with latex, 或者选择build System后 command + b<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim2.png" alt="skim"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/10/Java%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%8F%8D%E5%B0%84%EF%BC%8C%E6%B3%A8%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1258,7 +1371,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
