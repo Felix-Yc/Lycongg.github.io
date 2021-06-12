@@ -24,7 +24,7 @@
 
   <meta name="description" content="之前想学一下latex,但是环境没配好，不了了之，今天心血来潮，必拿下！ 准备在 Sublime Text 和 mac 中使用 LaTeX 需要四个工具：  MacTeX Sublime Text LaTeXTools Skim  MacTeX 包含在Mac上使用LaTeX所需的与TeX相关的程序和包。Sublime Text是一个用于编写LaTeX文档的文本编辑器。Skim 是用于查看LaTeX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac sublime+Latex+skim超详细配置过程">
+<meta property="og:title" content="Mac Sublime+Latex+Skim超详细配置过程">
 <meta property="og:url" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Scallop Silk">
 <meta property="og:description" content="之前想学一下latex,但是环境没配好，不了了之，今天心血来潮，必拿下！ 准备在 Sublime Text 和 mac 中使用 LaTeX 需要四个工具：  MacTeX Sublime Text LaTeXTools Skim  MacTeX 包含在Mac上使用LaTeX所需的与TeX相关的程序和包。Sublime Text是一个用于编写LaTeX文档的文本编辑器。Skim 是用于查看LaTeX">
@@ -38,8 +38,9 @@
 <meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime6.png">
 <meta property="og:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim2.png">
 <meta property="article:published_time" content="2021-06-12T05:52:49.000Z">
-<meta property="article:modified_time" content="2021-06-12T07:06:44.932Z">
+<meta property="article:modified_time" content="2021-06-12T07:25:34.259Z">
 <meta property="article:author" content="怡誠">
+<meta property="article:tag" content="latex">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime7.png">
 
@@ -56,7 +57,7 @@
   };
 </script>
 
-  <title>mac sublime+Latex+skim超详细配置过程 | Scallop Silk</title>
+  <title>Mac Sublime+Latex+Skim超详细配置过程 | Scallop Silk</title>
   
 
 
@@ -133,6 +134,11 @@
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
         <li class="menu-item menu-item-归档">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
@@ -180,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          mac sublime+Latex+skim超详细配置过程
+          Mac Sublime+Latex+Skim超详细配置过程
         </h1>
 
         <div class="post-meta">
@@ -191,7 +197,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-06-12 13:52:49 / Modified: 15:06:44" itemprop="dateCreated datePublished" datetime="2021-06-12T13:52:49+08:00">2021-06-12</time>
+              <time title="Created: 2021-06-12 13:52:49 / Modified: 15:25:34" itemprop="dateCreated datePublished" datetime="2021-06-12T13:52:49+08:00">2021-06-12</time>
             </span>
 
           
@@ -246,16 +252,17 @@
 <li>搜索“Package Control: Install Package”</li>
 <li>按 Enter</li>
 <li>搜索“LaTeXTools”</li>
-<li>按Enter<br>提示一下信息表明安装成功：<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime7.png" alt="sublime"></li>
+<li>按Enter</li>
 </ol>
+<p>提示以下信息表明安装成功：<br><img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/sublime7.png" alt="sublime"></p>
 <h2 id="step5"><a href="#step5" class="headerlink" title="step5"></a>step5</h2><p>安装Skim:<a target="_blank" rel="noopener" href="https://skim-app.sourceforge.io/">skim</a></p>
 <h2 id="step6"><a href="#step6" class="headerlink" title="step6"></a>step6</h2><p>配置skim</p>
 <ol>
 <li>打开skim</li>
 <li>从菜单中选择“Skim”，然后选择“Preferences”</li>
-<li>选择“同步”</li>
-<li>选择“检查文件更改”</li>
-<li>选择“自动重新加载”</li>
+<li>在右上角两个大于号那选择“同步”</li>
+<li>勾选“检查文件更改”</li>
+<li>勾选“自动重新加载”</li>
 <li>从“预设”菜单中选择”sublime text”<br>配置如图：<img src="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/skim.png" alt="skim"></li>
 </ol>
 <h2 id="step7"><a href="#step7" class="headerlink" title="step7"></a>step7</h2><ol>
@@ -275,6 +282,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/latex/" rel="tag"># latex</a>
+          </div>
 
         
 
@@ -363,6 +373,10 @@
           <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
