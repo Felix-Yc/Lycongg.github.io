@@ -160,6 +160,99 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/27/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%BB%83%E4%B9%A01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/myprofile.jpg">
+      <meta itemprop="name" content="怡誠">
+      <meta itemprop="description" content="凡心所向，素履以往">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scallop Silk">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/27/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%BB%83%E4%B9%A01/" class="post-title-link" itemprop="url">动态规划练习1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-06-27 22:23:46 / Modified: 22:31:49" itemprop="dateCreated datePublished" datetime="2021-06-27T22:23:46+08:00">2021-06-27</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/06/27/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%BB%83%E4%B9%A01/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/27/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%BB%83%E4%B9%A01/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Project-Euler31"><a href="#Project-Euler31" class="headerlink" title="Project Euler31"></a><a target="_blank" rel="noopener" href="http://projecteuler.net/">Project Euler</a>31</h2><p>一维的动态规划题目较为简单，例如爬楼梯。实际遇到的题目大部分是二维的，要困难些。<br>练习题目： <a target="_blank" rel="noopener" href="http://projecteuler.net/index.php?section=problems&id=31">Problem 31</a>换零钱  </p>
+<blockquote>
+<p>In the United Kingdom the currency is made up of pound (£) and pence (p). There are eight coins in general circulation:<br>1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), and £2 (200p).<br>It is possible to make £2 in the following way:<br>1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p<br>How many different ways can £2 be made using any number of coins?  </p>
+</blockquote>
+<p>题目大意：给你2英镑（200便士）换成零钱，一共有多少种换法？</p>
+<h2 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h2><p>这种方法是最容易想到的，但是时间复杂度太高</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> target  = <span class="number">200</span>;</span><br><span class="line"><span class="keyword">int</span> ways = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> a = target; a &gt;= <span class="number">0</span>; a -= <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> b = a; b &gt;= <span class="number">0</span>; b -= <span class="number">100</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> c = b; c &gt;= <span class="number">0</span>; c -= <span class="number">50</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> d = c; d &gt;= <span class="number">0</span>; d -= <span class="number">20</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> e = d; e &gt;= <span class="number">0</span>; e -= <span class="number">10</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> f = e; f &gt;= <span class="number">0</span>; f -= <span class="number">5</span>) &#123;</span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> g = f; g &gt;= <span class="number">0</span>; g -= <span class="number">2</span>) &#123;</span><br><span class="line">                            ways++;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">£2 can be generated in 73682 number of ways</span><br><span class="line">Solution took 0 ms</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用动态规划"><a href="#使用动态规划" class="headerlink" title="使用动态规划"></a>使用动态规划</h2><ul>
+<li>子问题：在10便士内,用1,2,5三种零钱，有多少种换法</li>
+<li>边界：当需要换的钱为0时或者只有1种零钱（1便士）时，换零钱的方法都是1</li>
+</ul>
+<p><img src="/2021/06/27/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%BB%83%E4%B9%A01/%E5%B1%80%E9%83%A8%E9%97%AE%E9%A2%98%E8%A7%A3.png" alt="局部问题解"></p>
+<p>设局部最优解dp为一个二维数组，行索引为i，列索引为j<br>从只有1便士开始向上推导<br>从上图可以发现，当列索引j大于所持有零钱的最大值时，dp[i][j] = dp[i-1][j] + dp[i][j-MAX]，其中MAX是当前局部能换的最大零钱<br>举个例子，第三行第六列dp[2][5]，对于5便士有用或者不用两种选择。不用的话就有dp[1][5] = 4种方法，用的话就有dp[2][5-5] = 1种方法，二者之和就是5</p>
+<p>附上代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Euler31</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> target = <span class="number">200</span>;</span><br><span class="line">		<span class="keyword">int</span>[] coins_size = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">50</span>, <span class="number">100</span>, <span class="number">200</span>&#125;;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[coins_size.length][target];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;coins_size.length;i++)&#123;</span><br><span class="line">			dp[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j&lt;target;j++)&#123;</span><br><span class="line">			dp[<span class="number">0</span>][j] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;coins_size.length;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;target;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(j+<span class="number">1</span> == coins_size[i])&#123;</span><br><span class="line">					dp[i][j] = dp[i-<span class="number">1</span>][j] + <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(j+<span class="number">1</span> &gt; coins_size[i])&#123;</span><br><span class="line">					dp[i][j] = dp[i-<span class="number">1</span>][j] + dp[i][j - coins_size[i]];</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span>&#123;</span><br><span class="line">					dp[i][j] = dp[i-<span class="number">1</span>][j];</span><br><span class="line">				&#125;			</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(dp[coins_size.length-<span class="number">1</span>][target-<span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>再贴一个大神的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> target = <span class="number">200</span>;</span><br><span class="line"><span class="keyword">int</span>[] coinSizes = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">50</span>, <span class="number">100</span>, <span class="number">200</span> &#125;;</span><br><span class="line"><span class="keyword">int</span>[] ways = <span class="keyword">new</span> <span class="keyword">int</span>[target+<span class="number">1</span>];</span><br><span class="line">ways[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; coinSizes.Length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = coinSizes[i]; j &lt;= target; j++) &#123;</span><br><span class="line">        ways[j] += ways[j - coinSizes[i]];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://www.mathblog.dk/project-euler-31-combinations-english-currency-denominations/">Kristian: Investigating combinations of English currency denominations</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -535,88 +628,6 @@
         2. 给解析程序用
     3. 注解不是程序的一部分，可以理解为注解就是一个标签
 </code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/myprofile.jpg">
-      <meta itemprop="name" content="怡誠">
-      <meta itemprop="description" content="凡心所向，素履以往">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Scallop Silk">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/" class="post-title-link" itemprop="url">402古北水镇之行</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-06-07 17:21:51" itemprop="dateCreated datePublished" datetime="2021-06-07T17:21:51+08:00">2021-06-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-08 19:11:59" itemprop="dateModified" datetime="2021-06-08T19:11:59+08:00">2021-06-08</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>快乐的大学时光即将结束，趁现在赶紧行动！</p>
-<p><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1268.PNG"><br>北六环有一点堵车，其他都还好<br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1267.jpeg"><br>租了一辆GOLF，省油又好开<br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/WechatIMG24574.jpeg"><br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1343.JPG"><br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1351.JPG"><br><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1354.JPG"></p>
-<p><img src="/2021/06/07/402%E5%8F%A4%E5%8C%97%E6%B0%B4%E9%95%87%E4%B9%8B%E8%A1%8C/IMG_1344.JPG"><br>第二天去打真人cs，芃哥团战真猛，吃鸡落地成盒哈哈</p>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><p>402YYDS！</p>
 
       
     </div>
@@ -1224,7 +1235,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-12 15:38:06" itemprop="dateModified" datetime="2021-06-12T15:38:06+08:00">2021-06-12</time>
+                <time title="Modified: 2021-06-27 21:46:55" itemprop="dateModified" datetime="2021-06-27T21:46:55+08:00">2021-06-27</time>
               </span>
 
           
@@ -1286,13 +1297,13 @@
 </li>
 <li><p>series</p>
 <ul>
-<li><code>s1[&quot;a&quot;][&quot;b&quot;]</code></li>
-<li><code>s1[&quot;a&quot;,&quot;b&quot;]</code></li>
+<li>s1[“a”][“b”]</li>
+<li>s1[“a”,”b”]</li>
 </ul>
 </li>
 <li><p>DataFrame</p>
 <ul>
-<li><code>df.loc[&quot;a&quot;].loc[&quot;b&quot;]</code></li>
+<li>df.loc[“a”].loc[“b”]</li>
 </ul>
 </li>
 <li><p>从内层开始选择</p>
@@ -1389,7 +1400,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
