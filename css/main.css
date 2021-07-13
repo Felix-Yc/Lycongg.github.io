@@ -1192,7 +1192,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #95d2eb;
+  background: #cbff58;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2586,4 +2586,14 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+.headband {
+  height: 3px;
+  opacity: 0;
+}
+.container {
+  margin-top: 8px;
+}
+.site-brand-container {
+  background: linear-gradient(-50deg, #7085b6 0%, #87a7d9 99%, #def3f8 100%);
 }
