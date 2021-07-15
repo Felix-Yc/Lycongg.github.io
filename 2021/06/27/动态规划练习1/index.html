@@ -31,7 +31,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://lycongg.github.io/2021/06/27/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%BB%83%E4%B9%A01/%E5%B1%80%E9%83%A8%E9%97%AE%E9%A2%98%E8%A7%A3.png">
 <meta property="article:published_time" content="2021-06-27T14:23:46.000Z">
-<meta property="article:modified_time" content="2021-06-27T14:31:49.922Z">
+<meta property="article:modified_time" content="2021-07-15T14:06:52.194Z">
 <meta property="article:author" content="Kiwi">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -196,10 +196,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-06-27 22:23:46 / Modified: 22:31:49" itemprop="dateCreated datePublished" datetime="2021-06-27T22:23:46+08:00">2021-06-27</time>
+              <time title="Created: 2021-06-27 22:23:46" itemprop="dateCreated datePublished" datetime="2021-06-27T22:23:46+08:00">2021-06-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-07-15 22:06:52" itemprop="dateModified" datetime="2021-07-15T22:06:52+08:00">2021-07-15</time>
+              </span>
 
           
             <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -238,6 +244,8 @@
 <p>In the United Kingdom the currency is made up of pound (£) and pence (p). There are eight coins in general circulation:<br>1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), and £2 (200p).<br>It is possible to make £2 in the following way:<br>1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p<br>How many different ways can £2 be made using any number of coins?  </p>
 </blockquote>
 <p>题目大意：给你2英镑（200便士）换成零钱，一共有多少种换法？</p>
+<span id="more"></span>
+
 <h2 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h2><p>这种方法是最容易想到的，但是时间复杂度太高</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> target  = <span class="number">200</span>;</span><br><span class="line"><span class="keyword">int</span> ways = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> a = target; a &gt;= <span class="number">0</span>; a -= <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> b = a; b &gt;= <span class="number">0</span>; b -= <span class="number">100</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> c = b; c &gt;= <span class="number">0</span>; c -= <span class="number">50</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> d = c; d &gt;= <span class="number">0</span>; d -= <span class="number">20</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> e = d; e &gt;= <span class="number">0</span>; e -= <span class="number">10</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> f = e; f &gt;= <span class="number">0</span>; f -= <span class="number">5</span>) &#123;</span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> g = f; g &gt;= <span class="number">0</span>; g -= <span class="number">2</span>) &#123;</span><br><span class="line">                            ways++;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">£2 can be generated in 73682 number of ways</span><br><span class="line">Solution took 0 ms</span><br></pre></td></tr></table></figure>
