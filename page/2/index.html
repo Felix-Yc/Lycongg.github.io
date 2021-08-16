@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2018/01/25/matplotlib/">
+    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/12/numpy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/myprofile.jpg">
@@ -180,7 +180,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/01/25/matplotlib/" class="post-title-link" itemprop="url">matplotlib入门</a>
+            <a href="/2021/06/12/numpy/" class="post-title-link" itemprop="url">numpy入门</a>
         </h2>
 
         <div class="post-meta">
@@ -190,15 +190,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-01-25 17:27:56" itemprop="dateCreated datePublished" datetime="2018-01-25T17:27:56+08:00">2018-01-25</time>
+              <time title="创建时间：2021-06-12 15:37:59" itemprop="dateCreated datePublished" datetime="2021-06-12T15:37:59+08:00">2021-06-12</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-12 15:37:35" itemprop="dateModified" datetime="2021-06-12T15:37:35+08:00">2021-06-12</time>
-              </span>
 
           
   
@@ -209,8 +202,229 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/01/25/matplotlib/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/01/25/matplotlib/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/06/12/numpy/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/12/numpy/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="numpy的索引和切片"><a href="#numpy的索引和切片" class="headerlink" title="numpy的索引和切片"></a>numpy的索引和切片</h4><ul>
+<li><p>t[10,20]</p>
+</li>
+<li><p><code>t[[2,5],[4,8]]</code></p>
+</li>
+<li><p>t[3:]</p>
+</li>
+<li><p>t[[2,5,6]]</p>
+</li>
+<li><p>t[:,:4]</p>
+</li>
+<li><p>t[:,[2,5,6]]</p>
+</li>
+<li><p>t[2:3,5:7]</p>
+</li>
+</ul>
+<h4 id="numpy中的bool索引-where-clip的使用"><a href="#numpy中的bool索引-where-clip的使用" class="headerlink" title="numpy中的bool索引,where,clip的使用"></a>numpy中的bool索引,where,clip的使用</h4><ul>
+<li>t[t&lt;30] = 2</li>
+<li>np.where(t&lt;10,20,5)</li>
+<li>t.clip(10,20)</li>
+</ul>
+<h4 id="转置和读取本地文件"><a href="#转置和读取本地文件" class="headerlink" title="转置和读取本地文件"></a>转置和读取本地文件</h4><ul>
+<li><p>t.T</p>
+</li>
+<li><p>t.transpose()</p>
+</li>
+<li><p>t.sawpaxes()</p>
+</li>
+<li><p>np.loadtxt(file_path,delimiter,dtype)</p>
+</li>
+</ul>
+<h4 id="nan和inf是什么"><a href="#nan和inf是什么" class="headerlink" title="nan和inf是什么"></a>nan和inf是什么</h4><ul>
+<li><p>nan not a number</p>
+</li>
+<li><p>np.nan != np.nan</p>
+</li>
+<li><p>任何值和nan进行计算都是nan</p>
+</li>
+<li><p>inf 无穷</p>
+</li>
+</ul>
+<h4 id="常用统计函数"><a href="#常用统计函数" class="headerlink" title="常用统计函数"></a>常用统计函数</h4><ul>
+<li>t.sum()</li>
+<li>t.mean()</li>
+<li>np.meadian()</li>
+<li>t.max()</li>
+<li>t.min()</li>
+<li>np.ptp()</li>
+<li>t.std()</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/12/matplotlib2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/myprofile.jpg">
+      <meta itemprop="name" content="Kiwi">
+      <meta itemprop="description" content="stay passionate, stay inquisitive">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scallop Silk">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/12/matplotlib2/" class="post-title-link" itemprop="url">matplotlib入门2</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-12 15:37:50" itemprop="dateCreated datePublished" datetime="2021-06-12T15:37:50+08:00">2021-06-12</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/06/12/matplotlib2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/12/matplotlib2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="四种图形使用情况对比"><a href="#四种图形使用情况对比" class="headerlink" title="四种图形使用情况对比"></a>四种图形使用情况对比</h4><ul>
+<li>观察变化的时候使用 折线图，plot</li>
+<li>观察不同维度之间的关系 散点图 ，scatter</li>
+<li>统计离散的数据  条形图 bar，barh</li>
+<li>统计连续的数据  直方图 hist</li>
+</ul>
+<h4 id="scatter"><a href="#scatter" class="headerlink" title="scatter"></a>scatter</h4><ul>
+<li>plt.scatter(x,y)</li>
+</ul>
+<h4 id="bar，barh"><a href="#bar，barh" class="headerlink" title="bar，barh"></a>bar，barh</h4><ul>
+<li>plt.bar(x,y,width=0.3）</li>
+<li>plt.bar(x,y,height=0.3）</li>
+</ul>
+<h4 id="hist"><a href="#hist" class="headerlink" title="hist"></a>hist</h4><ul>
+<li>plt.hist([1,2,3],组数)</li>
+<li>组数=（最大值-最小值）/ 组距</li>
+</ul>
+<h4 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h4><ul>
+<li><p>创建数组</p>
+<blockquote>
+<p>import numpy as np<br>np.array([])<br>np.array(range())<br>np.arange(3,10,2)  #生成从3到10，步长为2的一个一维数组</p>
+</blockquote>
+</li>
+<li><p>数据类型</p>
+<blockquote>
+<p>int, float, “int64” ,”int32”,”float32”,bool<br>t1.dtype  #观察数据类型<br>t1.astype()</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/12/matplotlib/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/myprofile.jpg">
+      <meta itemprop="name" content="Kiwi">
+      <meta itemprop="description" content="stay passionate, stay inquisitive">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scallop Silk">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/12/matplotlib/" class="post-title-link" itemprop="url">matplotlib入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-12 15:37:35" itemprop="dateCreated datePublished" datetime="2021-06-12T15:37:35+08:00">2021-06-12</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/06/12/matplotlib/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/12/matplotlib/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -371,7 +585,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2018/01/25/matplotlib2/">
+    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/myprofile.jpg">
@@ -385,7 +599,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/01/25/matplotlib2/" class="post-title-link" itemprop="url">matplotlib入门2</a>
+            <a href="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Mac Sublime+Latex+Skim详细配置过程</a>
         </h2>
 
         <div class="post-meta">
@@ -395,14 +609,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-01-25 17:27:52" itemprop="dateCreated datePublished" datetime="2018-01-25T17:27:52+08:00">2018-01-25</time>
+              <time title="创建时间：2021-06-12 13:52:49" itemprop="dateCreated datePublished" datetime="2021-06-12T13:52:49+08:00">2021-06-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-12 15:37:50" itemprop="dateModified" datetime="2021-06-12T15:37:50+08:00">2021-06-12</time>
+                <time title="修改时间：2021-07-15 22:07:27" itemprop="dateModified" datetime="2021-07-15T22:07:27+08:00">2021-07-15</time>
               </span>
 
           
@@ -414,8 +628,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2018/01/25/matplotlib2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/01/25/matplotlib2/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -430,291 +644,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="四种图形使用情况对比"><a href="#四种图形使用情况对比" class="headerlink" title="四种图形使用情况对比"></a>四种图形使用情况对比</h4><ul>
-<li>观察变化的时候使用 折线图，plot</li>
-<li>观察不同维度之间的关系 散点图 ，scatter</li>
-<li>统计离散的数据  条形图 bar，barh</li>
-<li>统计连续的数据  直方图 hist</li>
-</ul>
-<h4 id="scatter"><a href="#scatter" class="headerlink" title="scatter"></a>scatter</h4><ul>
-<li>plt.scatter(x,y)</li>
-</ul>
-<h4 id="bar，barh"><a href="#bar，barh" class="headerlink" title="bar，barh"></a>bar，barh</h4><ul>
-<li>plt.bar(x,y,width=0.3）</li>
-<li>plt.bar(x,y,height=0.3）</li>
-</ul>
-<h4 id="hist"><a href="#hist" class="headerlink" title="hist"></a>hist</h4><ul>
-<li>plt.hist([1,2,3],组数)</li>
-<li>组数=（最大值-最小值）/ 组距</li>
-</ul>
-<h4 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h4><ul>
-<li><p>创建数组</p>
-<blockquote>
-<p>import numpy as np<br>np.array([])<br>np.array(range())<br>np.arange(3,10,2)  #生成从3到10，步长为2的一个一维数组</p>
-</blockquote>
-</li>
-<li><p>数据类型</p>
-<blockquote>
-<p>int, float, “int64” ,”int32”,”float32”,bool<br>t1.dtype  #观察数据类型<br>t1.astype()</p>
-</blockquote>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2018/01/25/numpy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/myprofile.jpg">
-      <meta itemprop="name" content="Kiwi">
-      <meta itemprop="description" content="stay passionate, stay inquisitive">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Scallop Silk">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/01/25/numpy/" class="post-title-link" itemprop="url">numpy入门</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-01-25 17:27:48" itemprop="dateCreated datePublished" datetime="2018-01-25T17:27:48+08:00">2018-01-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-12 15:37:59" itemprop="dateModified" datetime="2021-06-12T15:37:59+08:00">2021-06-12</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/01/25/numpy/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/01/25/numpy/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="numpy的索引和切片"><a href="#numpy的索引和切片" class="headerlink" title="numpy的索引和切片"></a>numpy的索引和切片</h4><ul>
-<li><p>t[10,20]</p>
-</li>
-<li><p><code>t[[2,5],[4,8]]</code></p>
-</li>
-<li><p>t[3:]</p>
-</li>
-<li><p>t[[2,5,6]]</p>
-</li>
-<li><p>t[:,:4]</p>
-</li>
-<li><p>t[:,[2,5,6]]</p>
-</li>
-<li><p>t[2:3,5:7]</p>
-</li>
-</ul>
-<h4 id="numpy中的bool索引-where-clip的使用"><a href="#numpy中的bool索引-where-clip的使用" class="headerlink" title="numpy中的bool索引,where,clip的使用"></a>numpy中的bool索引,where,clip的使用</h4><ul>
-<li>t[t&lt;30] = 2</li>
-<li>np.where(t&lt;10,20,5)</li>
-<li>t.clip(10,20)</li>
-</ul>
-<h4 id="转置和读取本地文件"><a href="#转置和读取本地文件" class="headerlink" title="转置和读取本地文件"></a>转置和读取本地文件</h4><ul>
-<li><p>t.T</p>
-</li>
-<li><p>t.transpose()</p>
-</li>
-<li><p>t.sawpaxes()</p>
-</li>
-<li><p>np.loadtxt(file_path,delimiter,dtype)</p>
-</li>
-</ul>
-<h4 id="nan和inf是什么"><a href="#nan和inf是什么" class="headerlink" title="nan和inf是什么"></a>nan和inf是什么</h4><ul>
-<li><p>nan not a number</p>
-</li>
-<li><p>np.nan != np.nan</p>
-</li>
-<li><p>任何值和nan进行计算都是nan</p>
-</li>
-<li><p>inf 无穷</p>
-</li>
-</ul>
-<h4 id="常用统计函数"><a href="#常用统计函数" class="headerlink" title="常用统计函数"></a>常用统计函数</h4><ul>
-<li>t.sum()</li>
-<li>t.mean()</li>
-<li>np.meadian()</li>
-<li>t.max()</li>
-<li>t.min()</li>
-<li>np.ptp()</li>
-<li>t.std()</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lycongg.github.io/2018/01/25/pandas2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/myprofile.jpg">
-      <meta itemprop="name" content="Kiwi">
-      <meta itemprop="description" content="stay passionate, stay inquisitive">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Scallop Silk">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/01/25/pandas2/" class="post-title-link" itemprop="url">pandas(二)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-01-25 17:27:38" itemprop="dateCreated datePublished" datetime="2018-01-25T17:27:38+08:00">2018-01-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-27 21:46:55" itemprop="dateModified" datetime="2021-06-27T21:46:55+08:00">2021-06-27</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/01/25/pandas2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/01/25/pandas2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="字符串离散化进行统计"><a href="#字符串离散化进行统计" class="headerlink" title="字符串离散化进行统计"></a>字符串离散化进行统计</h4><ul>
-<li>获取分类去重后的列表</li>
-<li>构造全为0的DataFrame，形状是（数据的行数，分类列表的长度），列索引是分类去重后的列表</li>
-<li>遍历原始数据，对全为0的df赋值<ul>
-<li>zeros_df.loc[i,[“T”,”M”]] = 1</li>
-</ul>
-</li>
-<li>按列进行求和</li>
-</ul>
-<h4 id="join"><a href="#join" class="headerlink" title="join"></a>join</h4><ul>
-<li>按照行索引进行合并</li>
-</ul>
-<h4 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h4><ul>
-<li>按照某一列进行和并<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">[1,2,3],</span><br><span class="line">[4,5,6]</span><br><span class="line">]</span><br><span class="line">[</span><br><span class="line">[10,2,31],</span><br><span class="line">[43,52,62]</span><br><span class="line">]</span><br><span class="line">ret: 左连接</span><br><span class="line">[</span><br><span class="line">[1,2,3,10,2,31],</span><br><span class="line">[4,5,6,nan,nan,nan]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">ret: 内连接</span><br><span class="line">[</span><br><span class="line">[1,2,3,10,2,31]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">ret: 外连接</span><br><span class="line">[</span><br><span class="line">[1,2,3,10,2,31]</span><br><span class="line">[4,5,6，nan,nan,nan]</span><br><span class="line">[nan,nan,nan,43,52,62]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">ret: 右连接</span><br><span class="line">[</span><br><span class="line">[1,2,3,10,2,31]</span><br><span class="line">[nan,nan,nan,43,52,62]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="数据的分组和聚合"><a href="#数据的分组和聚合" class="headerlink" title="数据的分组和聚合"></a>数据的分组和聚合</h4><ul>
-<li><p>groupby(by=””).count()</p>
-</li>
-<li><p>groupby(by=[“”,””]).count() —&gt;返回复合索引的df</p>
-</li>
-<li><p>可迭代</p>
-</li>
-</ul>
-<h4 id="索引的相关知识点"><a href="#索引的相关知识点" class="headerlink" title="索引的相关知识点"></a>索引的相关知识点</h4><ul>
-<li><p>df.index</p>
-</li>
-<li><p>df.index = []</p>
-</li>
-<li><p>df.set_index(“a”) #把某一列作为索引</p>
-</li>
-<li><p>df.set_index([“a”,”b”]) #把某几列作为索引</p>
-</li>
-<li><p>series</p>
+          <p>之前想学一下latex,但是环境没配好，不了了之，今天心血来潮，必拿下！</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>在 Sublime Text 和 mac 中使用 LaTeX 需要四个工具：</p>
 <ul>
-<li>s1[“a”][“b”]</li>
-<li>s1[“a”,”b”]</li>
+<li>MacTeX</li>
+<li>Sublime Text</li>
+<li>LaTeXTools</li>
+<li>Skim</li>
 </ul>
-</li>
-<li><p>DataFrame</p>
-<ul>
-<li>df.loc[“a”].loc[“b”]</li>
-</ul>
-</li>
-<li><p>从内层开始选择</p>
-<ul>
-<li>df.swaplevel()</li>
-</ul>
-</li>
-</ul>
-
+<p>MacTeX 包含在Mac上使用LaTeX所需的与TeX相关的程序和包。Sublime Text是一个用于编写LaTeX文档的文本编辑器。Skim 是用于查看LaTeX文档的PDF查看器。LaTeXTools插件提供了多种功能，可简化使用LaTeX文件并用于构建LaTeX文档。<br>latextools文档: <a target="_blank" rel="noopener" href="https://latextools.readthedocs.io/en/latest/">latextools</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/12/mac-sublime-Latex-skim%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
